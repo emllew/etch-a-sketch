@@ -1,5 +1,4 @@
 :root {
-  --grid-rows: 1;
   --grid-cols: 1;
 }
 
@@ -12,12 +11,13 @@ button:hover {
   color: green;
 }
 .container {
+  box-sizing: border-box;
   width: 600px;
   height: 600px;
   display: grid;
   grid-column-gap: 2px;
   grid-row-gap: 2px;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
+
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   background-color: rgba(255, 14, 14, 0.5);
 }
@@ -25,8 +25,8 @@ button:hover {
 .box {
   display: inline-block;
   background-color: rgba(220, 255, 235);
-  height: auto;
-  width: auto;
+
+  padding: 2px;
 }
 
 .active {
